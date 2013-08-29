@@ -54,8 +54,8 @@ namespace RibeEsbjergHH.Controllers
             message.From = new MailAddress(from);
             message.Subject = subject;
 
-            message.Text = "Kære " + participant.Name + ",\n\nTak for tilmeldingen til Ribe Esbjerg HH's håndboldskole i efterårsferien, mandag d. 15. til onsdag den 17. oktober. " +
-                "Det foregår i Guldager Idrætscenter den 15. - 17. oktober, mandag 9-15, tirsdag 9-15 og onsdag 9-17.\n" +
+            message.Text = "Kære " + participant.Name + ",\n\nTak for tilmeldingen til Ribe Esbjerg HH's håndboldskole i efterårsferien, mandag d. 14. til onsdag den 16. oktober. " +
+                "Det foregår i Guldager Idrætscenter den 14. - 16. oktober, 9-15 hver dag.\n" +
                 "Vi ser frem til en masse spændende og sjove timer sammen med dig!" +
                 "\n" +
                 "Hvis du har nogen spørgsmål eller problemer med betalingen er du velkommen til at kontakte Mark Bendixen på telefon 26 17 31 72 eller ved at svare på denne mail.\n\n" +
