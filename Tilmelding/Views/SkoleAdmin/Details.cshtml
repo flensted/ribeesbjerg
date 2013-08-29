@@ -1,0 +1,128 @@
+﻿@model RibeEsbjergHH.Models.Participant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Participant</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Sex)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sex)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BornYear)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BornYear)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PostalCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PostalCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomePhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomePhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ParentMobile)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParentMobile)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ParentEmail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParentEmail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ParentName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParentName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Club)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Club)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.YearsOfHandball)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.YearsOfHandball)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PlayerPosition)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PlayerPosition)
+    </div>
+
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TShirtSize)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TShirtSize)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExtraTickets)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExtraTickets)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Comments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comments)
+    </div>
+</fieldset>
+<p>
+@*    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+*@    @Html.ActionLink("Back to List", "Index")
+</p>

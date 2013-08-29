@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/Site.css" rel="Stylesheet" type="text/css" />
+    <script src="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Scripts/js")"></script>
+
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div id="outer_container">
+        <div id="container">
+            <div id="body">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>

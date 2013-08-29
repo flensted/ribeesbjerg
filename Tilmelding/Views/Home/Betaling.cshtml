@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Klar til betaling";
+}
+
+<h2>Nu mangler du kun betaling</h2>
+<p>
+Vi har modtaget dine oplysninger og mangler nu blot betalingen. Den foregår vha. SGI's bookingsystem, 
+som også anvendes til tilmelding til foreningens øvrige hold.
+</p>
+<p>
+Når du klikker på link'et herunder viderstilles du til bookingsystemet, hvor du bedes oprette en ny bruger, hvis du ikke har betnyttet systemet tidligere.
+</p>
+<p>Bemærk at du oprettelse af en ny bruger sker ved at klikke på "NY BRUGER" som vist på billedet her under.</p>
+        
+<form style="margin-bottom:0;" method="post" action="#" name="multiform" id="multiform">
+    <input type="hidden" name="mf_recordnr" value="1" />
+    <input type="hidden" name="mf_tilside" />
+    <input id="Submit1" type="submit" value="Til betaling for Ribe Esbjerg HH håndboldskole" onclick="sende('http://sgi-forening.halbooking.dk/proc_tilmelding.asp','visholdsamlet','270')"  />
+</form>
+<br /><br />
+<p>
+1. Først opretter du en ny brugger eller logger ind.<br/>
+2. Når du har gjort det klikker du på <b><em>SGI-Håndbold Esbjerg</em></b>.<br/>
+3. Og dernæst klikker du på <b><em>Tilmelding/Holdoversigt.</em></b><br/>
+<br />
+<img alt="Illustration af ny bruger oprettelse" src="../Images/nybruger.PNG" />
+<br />
+<br />
+<b>4. Herefter finder du holdet <b><em>REHH HÅNDBOLDSKOLE</em></b> i listen.</b><br/>
+<br />
+<img alt="Illustration af ny bruger oprettelse" src="../Images/rehhtilmelding.PNG" />
+</p>
+
+
+<script type="text/javascript" language="javascript">
+    function sende(target, funktion, para) {
+        document.multiform.mf_recordnr.value = para
+        document.multiform.mf_tilside.value = funktion
+        document.multiform.action = target
+        document.multiform.submit()
+        return false
+    }
+</script>

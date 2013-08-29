@@ -1,0 +1,123 @@
+﻿@model IEnumerable<RibeEsbjergHH.Models.Participant>
+
+@{
+    ViewBag.Title = "FullList";
+}
+
+<h2>FullList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BornYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomePhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParentMobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParentEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Club)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearsOfHandball)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayerPosition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TShirtSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExtraTickets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BornYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentMobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Club)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearsOfHandball)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlayerPosition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TShirtSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtraTickets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

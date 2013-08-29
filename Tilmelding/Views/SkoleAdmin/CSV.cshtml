@@ -1,0 +1,13 @@
+﻿@model IEnumerable<RibeEsbjergHH.Models.Participant>
+
+@{
+    Layout = null;
+    ViewBag.Title = "CSV";
+}
+
+@Html.DisplayNameFor(model => model.Sex), @Html.DisplayNameFor(model => model.BornYear), @Html.DisplayNameFor(model => model.Name), @Html.DisplayNameFor(model => model.Address), @Html.DisplayNameFor(model => model.PostalCode), @Html.DisplayNameFor(model => model.City), @Html.DisplayNameFor(model => model.HomePhone), @Html.DisplayNameFor(model => model.ParentMobile), @Html.DisplayNameFor(model => model.ParentEmail), @Html.DisplayNameFor(model => model.ParentName), @Html.DisplayNameFor(model => model.Club), @Html.DisplayNameFor(model => model.YearsOfHandball), @Html.DisplayNameFor(model => model.PlayerPosition), @Html.DisplayNameFor(model => model.TShirtSize), @Html.DisplayNameFor(model => model.ExtraTickets), @Html.DisplayNameFor(model => model.Comments) @Html.Raw("\n")
+
+@foreach (var item in Model) {
+@Html.Raw(item.Sex); @Html.Raw(", "); @Html.Raw(item.BornYear); @Html.Raw(", "); @Html.Raw(item.Name); @Html.Raw(", "); @Html.Raw(item.Address); @Html.Raw(", "); @Html.Raw(item.PostalCode); @Html.Raw(", "); @Html.Raw(item.City); @Html.Raw(", "); @Html.Raw(item.HomePhone); @Html.Raw(", "); @Html.Raw(item.ParentMobile); @Html.Raw(", "); @Html.Raw(item.ParentEmail); @Html.Raw(", "); @Html.Raw(item.ParentName); @Html.Raw(", "); @Html.Raw(item.Club); @Html.Raw(", "); @Html.Raw(item.YearsOfHandball); @Html.Raw(", "); @Html.Raw(item.PlayerPosition); @Html.Raw(", "); @Html.Raw(item.TShirtSize); @Html.Raw(", "); @Html.Raw(item.ExtraTickets); @Html.Raw(", "); @Html.Raw(item.Comments);  @Html.Raw("\n")
+}
+

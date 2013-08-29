@@ -1,0 +1,245 @@
+﻿@model RibeEsbjergHH.Models.Participant
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Participant</legend>
+
+        <table >
+            <tr>
+                <td width="200">
+                    <div class="editor-label">
+                        <label for="Sex">K&#248;n</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <select data-val="true" id="Sex" name="Sex" style="width:100px">
+                            <option id="Pige" value="Pige">Pige</option>
+                            <option id="Dreng" value="Dreng">Dreng</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="BornYear">F&#248;dsels&#229;r</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="true" data-val-number="Fødselsår skal være et tal." data-val-required="Fødselsår skal angives." id="BornYear" name="BornYear" type="number" value="" />
+                        <span class="field-validation-valid" data-valmsg-for="BornYear" data-valmsg-replace="true"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="Name">Navn</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="true" data-val-required="Navn skal angives." id="Name" name="Name" type="text" value="" />
+                        <span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="Address">Adresse</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <textarea class="text-box multi-line" data-val="true" data-val-required="Addresse skal angives." id="Address" name="Address">
+</textarea>
+                        <span class="field-validation-valid" data-valmsg-for="Address" data-valmsg-replace="true"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="PostalCode">Postnummer</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="true" data-val-required="Postnummer skal angives." id="PostalCode" name="PostalCode" type="text" value="" />
+                        <span class="field-validation-valid" data-valmsg-for="PostalCode" data-valmsg-replace="true"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="City">By</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="true" data-val-required="By skal angives." id="City" name="City" type="text" value="" />
+                        <span class="field-validation-valid" data-valmsg-for="City" data-valmsg-replace="true"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="HomePhone">Hjemmetelefon</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="true" id="HomePhone" name="HomePhone" type="text" value="" />
+                        <span class="field-validation-valid" data-valmsg-for="HomePhone" data-valmsg-replace="true"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="ParentMobile">For&#230;lders mobil</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="false" id="ParentMobile" name="ParentMobile" type="text" value="" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="ParentEmail">For&#230;lders email</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="true" data-val-required="Forælders email skal angives." id="ParentEmail" name="ParentEmail" type="email" value="" />
+                        <span class="field-validation-valid" data-valmsg-for="ParentEmail" data-valmsg-replace="true"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="ParentName">For&#230;lders navn</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="true" data-val-required="Forælders navn skal angives." id="ParentName" name="ParentName" type="text" value="" />
+                        <span class="field-validation-valid" data-valmsg-for="ParentName" data-valmsg-replace="true"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="Club">Forening</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="false" id="Club" name="Club" type="text" value="" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="YearsOfHandball">Jeg har spillet h&#229;ndbold i (&#229;r)</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="true" data-val-number="Angiv et antal år du har spillet håndbold." data-val-required="Angiv et antal år du har spillet håndbold." id="YearsOfHandball" name="YearsOfHandball" type="text" value="" />
+                        <span class="field-validation-valid" data-valmsg-for="YearsOfHandball" data-valmsg-replace="true"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="PlayerPosition">Jeg spiller</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <select id="PlayerPosition" name="PlayerPosition" style="width:100px">
+                            <option value="Bagspiller">Bagspiller</option>
+                            <option value="Streg">Streg</option>
+                            <option value="Fløj">Fløj</option>
+                            <option value="Målvogter">Målvogter</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="TShirtSize">T-shirt-st&#248;rrelse</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="true" data-val-required="Angiv din T-shirt-størrelse." id="TShirtSize" name="TShirtSize" type="text" value="" />
+                        <span class="field-validation-valid" data-valmsg-for="TShirtSize" data-valmsg-replace="true"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="ExtraTickets">Antal extra billetter til ligakamp (max 3)</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <input class="text-box single-line" data-val="flae" data-val-number="The field Antal extra billetter til ligakamp (max 3) must be a number." id="ExtraTickets" name="ExtraTickets" type="number" value="" />
+                        <span class="field-validation-valid" data-valmsg-for="ExtraTickets" data-valmsg-replace="true"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        <label for="Comments">Andre bem&#230;rkninger (s&#230;rlige forhold, medicin, di&#230;ter)</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-field">
+                        <textarea rows="4" class="text-box multi-line" id="Comments" name="Comments">
+</textarea>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+        <p>
+            <input type="submit" value="Gå til betaling" />
+        </p>
+    </fieldset>
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
