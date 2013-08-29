@@ -23,12 +23,6 @@
         <th>
             @Html.DisplayNameFor(model => model.ParentEmail)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Club)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.YearsOfHandball)
-        </th>
         <th></th>
     </tr>
 
@@ -45,12 +39,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ParentEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Club)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.YearsOfHandball)
         </td>
         <td>
             @Html.ActionLink("Details", "Details", new { id=item.Id }) @*|

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using RibeEsbjergHH.Models;
+using System.Text;
 
 namespace RibeEsbjergHH.Controllers
 {
@@ -36,7 +37,16 @@ namespace RibeEsbjergHH.Controllers
         public ActionResult CSV()
         {
             var repo = new ParticipantRepository();
-            return View(repo.GetAll());
+            var participants = repo.GetAll();
+            StringBuilder sb = new StringBuilder(participants.Count());
+            foreach (var p in participants)
+            {
+                sb.Append(
+                    string.Format("{0};{1};{2};{3};{4};{5};{6};{7};{8};{9};{10};{11}\r\n",
+                    p.Name, p.Sex, p.BornYear, p.Address.Trim().Replace("\r\n", ", "), p.PostalCode, p.City, p.HomePhone, p.ParentName, p.ParentMobile, p.ParentEmail, p.TShirtSize, p.Comments.Trim().Replace("\r\n", " "))
+                    );
+            }
+            return File(new System.Text.UTF8Encoding().GetBytes(sb.ToString()), "text/csv", "Tilemeldinger.csv");
         }
 
 

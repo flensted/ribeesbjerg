@@ -14,6 +14,7 @@ namespace RibeEsbjergHH.Models
 
         static ParticipantRepository()
         {
+            store.Conventions.AllowQueriesOnId = true;
             store.Initialize();
 
             //Participants.Add( new Participant() { 

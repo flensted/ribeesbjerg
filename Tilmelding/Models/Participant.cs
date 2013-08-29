@@ -54,35 +54,13 @@ namespace RibeEsbjergHH.Models
         [Display(Name = "Forælders navn")]
         public string ParentName { get; set; }
 
-        [Display(Name = "Forening")]
-        public string Club { get; set; }
-
-        [Required]
-        [Display(Name = "Jeg har spillet håndbold i (år)")]
-        public float YearsOfHandball { get; set; }
-
-        [Display(Name = "Jeg spiller")]
-        public string PlayerPosition { get; set; }
-
-
         [Required]
         [Display(Name = "T-shirt-størrelse")]
         public string TShirtSize { get; set; }
 
-        [Display(Name = "Antal extra billetter til ligakamp (max 3)")]
-        public int ExtraTickets { get; set; }
-
         [DataType(DataType.MultilineText)]
         [Display(Name = "Andre bemærkninger (særlige forhold, medicin, diæter)")]
         public string Comments { get; set; }
-    }
-
-    public enum Position
-    {
-        Bagspiller,
-        Streg,
-        Fløj,
-        Målvogter
     }
 
 }
