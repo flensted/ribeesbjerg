@@ -33,7 +33,7 @@ namespace RibeEsbjergHH.Controllers
             }
             catch (Exception ex)
             {
-                return View();
+                return View("Create");
             }
         }
 
@@ -68,14 +68,10 @@ namespace RibeEsbjergHH.Controllers
                 "Adresse: " + participant.Address + "\n" +
                 "Postnummer: " + participant.PostalCode + "\n" +
                 "By: " + participant.City + "\n" +
+                "Forælders navn: " + participant.ParentName + "\n" +
                 "Hjemmetelefon: " + participant.HomePhone + "\n" +
                 "Mobiltelefon: " + participant.ParentMobile + "\n" +
-                "Forælders navn: " + participant.ParentName + "\n" +
-                "Forening: " + participant.Club + "\n" +
-                "År med håndbold: " + participant.YearsOfHandball + "\n" +
-                "Position: " + participant.PlayerPosition + "\n" +
                 "T-shirt størrelse: " + participant.TShirtSize + "\n" +
-                "Antal ligabilletter: " + participant.ExtraTickets + "\n" +
                 "Øvrige kommentarer: " + participant.Comments;
 
             var transportInstance = SMTP.GetInstance(new NetworkCredential(username, password));
