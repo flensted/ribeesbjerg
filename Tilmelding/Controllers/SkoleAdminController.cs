@@ -43,7 +43,7 @@ namespace RibeEsbjergHH.Controllers
             {
                 sb.Append(
                     string.Format("{0};{1};{2};{3};{4};{5};{6};{7};{8};{9};{10};{11}\r\n",
-                    p.Name, p.Sex, p.BornYear, p.Address.Trim().Replace("\r\n", ", "), p.PostalCode, p.City, p.HomePhone, p.ParentName, p.ParentMobile, p.ParentEmail, p.TShirtSize, p.Comments.Trim().Replace("\r\n", " "))
+                    p.Name, p.Sex, p.BornYear, p.Address.Trim().Replace("\r\n", ", "), p.PostalCode, p.City, p.HomePhone, p.ParentName, p.ParentMobile, p.ParentEmail, p.TShirtSize, p.Comments != null ? p.Comments.Trim().Replace("\r\n", " ") : "")
                     );
             }
             return File(new System.Text.UTF8Encoding().GetBytes(sb.ToString()), "text/csv", "Tilemeldinger.csv");
